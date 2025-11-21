@@ -7,9 +7,8 @@
 ### Phase 1-2: Index Performance
 인덱스 성능 비교 및 최적화
 
-[📁 바로가기](./phase 1-2)
 
 ### Phase 1-3: ETL Pipeline
 MySQL 데이터 추출/변환/저장 파이프라인
 
-[📁 바로가기](./phase 1-3)
+
