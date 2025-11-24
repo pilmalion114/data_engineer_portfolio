@@ -40,8 +40,12 @@ events = data['events'] or [] # []: 실제로 EPL 경기가 안 들어있을 경
 epl_events = [
     m for m in events
     #if m.get('strLeague') == 'English Premier League' 
-    if m.get('strLeague') == 'English Premier League' or 'English League Championship'
+     if m.get('strLeague') == 'English Premier League' or 'English League Championship' # 이렇게 쓰면, 'English League Championship'은 항상 true가 되어서, csv 데이터에 '리그 1(3부 리그)' 정보가 담긴다.
+    # if m.get('strLeague') == 'English Premier League' or m.get('strLeague') == 'English League Championship' # 이렇게 조건식을 full로 써야한다. 
+    # 1부 리그, 2부 리그 경기 일정이 없어서 그냥 3부 리그 일정으로 진행 ㄱㄱ
+
 ]
+
 
 # 다음 5경기 출력
 # cf.) 'eventsnextLeague.php는 epl이 아닌 championship(2부 리그) 정보까지 섞여나오는 오류(버그)가 있음. 그래서 구조를 좀 바꿈.
@@ -134,6 +138,7 @@ for team in data2['table']:
 df_standings = pd.DataFrame(standing_list)
 
 # 날짜별 파일명
+today = datetime.now().strftime('%Y%m%d')
 standings_filename = f'data/epl_standings_{today}.csv'
 
 df_standings.to_csv(standings_filename, index=False, encoding='utf-8-sig')
