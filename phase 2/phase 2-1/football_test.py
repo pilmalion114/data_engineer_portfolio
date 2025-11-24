@@ -41,6 +41,7 @@ epl_events = [
     m for m in events
     #if m.get('strLeague') == 'English Premier League' 
      if m.get('strLeague') == 'English Premier League' or 'English League Championship' # 이렇게 쓰면, 'English League Championship'은 항상 true가 되어서, csv 데이터에 '리그 1(3부 리그)' 정보가 담긴다.
+    # 'English League Championship'은 항상 true인 이유: 파이썬의 내부 동작의 이유 때문. 우리는 보통 0(false) 이외의 값들은 true로 보는데, 파이썬도 마찬가지이다. 파이썬 또한 'Null'이나 '0' 이렇게 비어있거나 0인 값들은 false로 보고, 나머지는 있는 값들로 판단하여, true로 본다. 그런 이유 때문에 'English League Championship'은 항상 true이다.
     # if m.get('strLeague') == 'English Premier League' or m.get('strLeague') == 'English League Championship' # 이렇게 조건식을 full로 써야한다. 
     # 1부 리그, 2부 리그 경기 일정이 없어서 그냥 3부 리그 일정으로 진행 ㄱㄱ
 
