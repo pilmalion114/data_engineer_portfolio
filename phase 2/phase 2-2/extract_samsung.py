@@ -20,7 +20,9 @@ print("-" * 50)
 
 # 2. 데이터 추출
 print("\n데이터 추출 중...")
-samsung = fdr.DataReader(Stock_Code, Start_Date, End_Date)
+samsung = fdr.DataReader(Stock_Code, Start_Date, End_Date) 
+print(samsung.index) # samsung 데이터의 index 출력. 자동으로 DataReader가 'Date'를 인덱스로 설정함.
+# Index: 각 행(row)을 식별하는 기준. 인덱스 단어 그 자체의 의미로 행이라고 생각하면 되고, 대신 여기에 '행의 기준이 되는 = 식별할 기준이 되는'을 덧붙이면 된다.
 
 
 # 3. 기본 정보 확인 
