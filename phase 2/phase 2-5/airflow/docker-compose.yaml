@@ -127,7 +127,8 @@ services:
     <<: *airflow-common
     command: api-server
     ports:
-      - "8080:8080"
+      - "8081:8080" # "8080:8080"을 이렇게 바꿈. "8081:8080"은 "호스트포트:컨테이너포트임". 이 의미는, 내 컴퓨터(Host PC)에서 '8081'로 들어오면, Docker 컨테이너 내부의 '8080'으로 보내준다는 의미이다. 
+      # Q.만약 Host뿐만 아니라 컨테이너포트까지 바꾸면 어떻게 될까? A. Airflow 내부 설정 없이 그냥 바꾸면 오류남(연결을 못함.). Airflow 공식 Docker 이미지(webserver)는 컨테이너 내부 8080 포트에서 실행되도록 빌드되어있다. 그래서 웬만하면 '컨테이너포트'는 바꾸지 않는 걸 추천한다.
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/api/v2/version"]
       interval: 30s
