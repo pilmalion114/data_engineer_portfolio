@@ -1,0 +1,12 @@
+{"timestamp":"2025-12-03T07:56:33.763617Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-03T07:56:33.764999Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/samsung_ETL_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-03T07:56:33.805308Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/samsung_ETL_dag.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-12-03T07:56:33.825260Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:33.825754Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:33.826140Z","level":"info","event":"Current task name:load_task","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:33.826534Z","level":"info","event":"Dag name:samsung_etl_dag","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:34.131040Z","level":"info","event":"데이터 242건 적재 완료!","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:34.131130Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":215}
+{"timestamp":"2025-12-03T07:56:34.150352Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:34.150843Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:34.151218Z","level":"info","event":"Task operator:<Task(PythonOperator): load_task>","logger":"task.stdout"}

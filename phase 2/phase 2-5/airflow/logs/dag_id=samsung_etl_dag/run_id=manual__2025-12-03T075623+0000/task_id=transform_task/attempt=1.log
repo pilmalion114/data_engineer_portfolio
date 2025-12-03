@@ -1,0 +1,161 @@
+{"timestamp":"2025-12-03T07:56:31.508185Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-03T07:56:31.509602Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/samsung_ETL_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-03T07:56:31.553264Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/samsung_ETL_dag.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-12-03T07:56:31.574354Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.574814Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.575178Z","level":"info","event":"Current task name:transform_task","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.575590Z","level":"info","event":"Dag name:samsung_etl_dag","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.589337Z","level":"info","event":"타입은: <class 'pandas.core.indexes.datetimes.DatetimeIndex'>","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.589779Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.590091Z","level":"info","event":"현재 데이터 확인","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.590479Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.590788Z","level":"info","event":"총 데이터: 242 rows","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.591213Z","level":"info","event":"컬럼: ['Open', 'High', 'Low', 'Close', 'Volume', 'Change']","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.591541Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.591829Z","level":"info","event":"최근 5일:","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.600185Z","level":"info","event":"             Open   High    Low  Close    Volume    Change","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.600732Z","level":"info","event":"Date","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.601170Z","level":"info","event":"2024-11-28  56000  56400  55200  55500  20001134 -0.014210","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.601512Z","level":"info","event":"2024-11-29  55100  55300  53800  54200  24513531 -0.023423","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.601926Z","level":"info","event":"2024-12-02  54300  54400  53100  53600  22044867 -0.011070","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.602213Z","level":"info","event":"2024-12-03  53100  54400  53100  53600  23374603  0.000000","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.602515Z","level":"info","event":"2024-12-04  52000  53400  52000  53100  29004766 -0.009328","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.602788Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.603075Z","level":"info","event":"기본 통계:","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.616922Z","level":"info","event":"                Open           High  ...        Volume      Change","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.617417Z","level":"info","event":"count     242.000000     242.000000  ...  2.420000e+02  242.000000","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.617731Z","level":"info","event":"mean    66473.140496   67321.900826  ...  1.939439e+07    0.002739","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.618056Z","level":"info","event":"std     15804.211243   16084.137430  ...  7.614144e+06    0.021074","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.618462Z","level":"info","event":"min     51100.000000   51400.000000  ...  5.848342e+06   -0.057654","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.618736Z","level":"info","event":"25%     55100.000000   55825.000000  ...  1.386390e+07   -0.010910","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.619012Z","level":"info","event":"50%     59300.000000   59850.000000  ...  1.809467e+07    0.001794","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.619311Z","level":"info","event":"75%     71075.000000   71875.000000  ...  2.334746e+07    0.014534","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.619713Z","level":"info","event":"max    111800.000000  112400.000000  ...  5.482456e+07    0.068285","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.620019Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.620300Z","level":"info","event":"[8 rows x 6 columns]","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.620607Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.620899Z","level":"info","event":"Transform 시작: 파생 변수 생성","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.621186Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.621546Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.621854Z","level":"info","event":"✅ 파생 변수 생성 완료!","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.622149Z","level":"info","event":"새로운 컬럼: MA_5, MA_20, Volatility_20, Volume_MA_5, Price_Range, Price_Range_Pct, Close_Position","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.622432Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.622769Z","level":"info","event":"최근 5일 데이터 (파생 변수 포함):","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.626712Z","level":"info","event":"             Close     MA_5     MA_20  Volatility_20  Price_Range_Pct","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.627178Z","level":"info","event":"Date","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.627526Z","level":"info","event":"2025-11-21   94800  98060.0  101240.0       0.034200         2.426160","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.627868Z","level":"info","event":"2025-11-24   96700  97280.0  100975.0       0.033663         2.895553","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.628171Z","level":"info","event":"2025-11-25   99300  97580.0  100965.0       0.033826         3.625378","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.628450Z","level":"info","event":"2025-11-26  102800  98840.0  101080.0       0.034661         3.501946","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.628777Z","level":"info","event":"2025-11-27  103500  99420.0  101050.0       0.033754         2.705314","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.629048Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.629342Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.629682Z","level":"info","event":"결측치 확인","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.630011Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.630445Z","level":"info","event":"Open                0","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.630754Z","level":"info","event":"High                0","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.631080Z","level":"info","event":"Low                 0","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.631385Z","level":"info","event":"Close               0","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.631751Z","level":"info","event":"Volume              0","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.632089Z","level":"info","event":"Change              0","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.632383Z","level":"info","event":"MA_5                4","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.632676Z","level":"info","event":"MA_20              19","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.632971Z","level":"info","event":"Volatility_20      19","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.633328Z","level":"info","event":"Volume_MA_5         4","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.633629Z","level":"info","event":"Price_Range         0","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.633949Z","level":"info","event":"Price_Range_Pct     0","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.634247Z","level":"info","event":"Close_Position      0","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.634559Z","level":"info","event":"dtype: int64","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.634847Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.635163Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.635488Z","level":"info","event":"Step 2: 데이터 검증 로직","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.635779Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.636042Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.636289Z","level":"info","event":"[1] 논리적 검증","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.636620Z","level":"info","event":"--------------------------------------------------","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.636980Z","level":"info","event":"✅ High >= Low: 정상","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.637275Z","level":"info","event":"✅ High >= Close >= Low: 정상","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.637540Z","level":"info","event":"✅ High >= Open >= Low: 정상","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.637812Z","level":"info","event":"✅ Volume > 0: 정상","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.638095Z","level":"info","event":"✅ 모든 가격 양수: 정상","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.638410Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.638677Z","level":"info","event":"--------------------------------------------------","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.638990Z","level":"info","event":"[2] 이상치 탐지","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.639332Z","level":"info","event":"--------------------------------------------------","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.640022Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.640371Z","level":"info","event":"급등 (5% 이상): 0건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.640671Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.640980Z","level":"info","event":"급락 (5% 이하): 0건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.641260Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.641573Z","level":"info","event":"거래량 폭증 (평균의 2배 이상): 6건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.641865Z","level":"info","event":"              Volume    Change","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.642183Z","level":"info","event":"Date","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.642481Z","level":"info","event":"2025-10-31  54824564  0.032661","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.642852Z","level":"info","event":"2025-10-02  49883028  0.034884","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.643139Z","level":"info","event":"2025-11-05  44843020 -0.040991","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.643519Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.643804Z","level":"info","event":"일중 변동폭 큼 (5% 이상): 5건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.644144Z","level":"info","event":"              High     Low  Price_Range_Pct","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.644487Z","level":"info","event":"Date","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.644859Z","level":"info","event":"2025-11-04  112400  104900         7.149666","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.645127Z","level":"info","event":"2025-10-14   96000   90200         6.331878","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.645411Z","level":"info","event":"2025-02-10   55900   52900         5.395683","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.645730Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.646047Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.646315Z","level":"info","event":"검증 결과 요약","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.646595Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.646925Z","level":"info","event":"총 데이터: 242건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.647214Z","level":"info","event":"논리적 오류: 0건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.647669Z","level":"info","event":"급등 (5%+): 0건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.647960Z","level":"info","event":"급락 (5%-): 0건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.648314Z","level":"info","event":"거래량 폭증: 6건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.648687Z","level":"info","event":"일중 변동 큼: 5건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.648962Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.649259Z","level":"info","event":"데이터 품질 점수: 100.0/100","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.649559Z","level":"info","event":"✅ 완벽한 데이터 품질!","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.649853Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.650125Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.650465Z","level":"info","event":"Step 2: 데이터 검증 완료!","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.650829Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.651117Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.651438Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.651799Z","level":"info","event":"Step 3: 데이터 저장","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.652189Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.652621Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.652967Z","level":"info","event":"[1] 변환된 데이터 저장","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.653294Z","level":"info","event":"--------------------------------------------------","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.653747Z","level":"info","event":"✅ 파일 저장: /opt/airflow/data/samsung_transformed.csv","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.654168Z","level":"info","event":"   - 총 컬럼: 13개","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.654480Z","level":"info","event":"   - 총 데이터: 242건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.654815Z","level":"info","event":"   - 파일 크기: 34.3 KB","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.655152Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.655529Z","level":"info","event":"[2] 검증 리포트 저장","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.655848Z","level":"info","event":"--------------------------------------------------","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.666299Z","level":"info","event":"✅ 검증 리포트 저장: /opt/airflow/data/validation_report.txt","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.667358Z","level":"info","event":"   - 파일 크기: 2.9 KB","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.667736Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.668088Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.668545Z","level":"info","event":"Transform 완료 요약","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.668904Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.669278Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.669576Z","level":"info","event":"    생성된 파일:","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.669909Z","level":"info","event":"    1. /opt/airflow/data/samsung_transformed.csv","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.670231Z","level":"info","event":"        - 변환된 주가 데이터 (파생 변수 포함)","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.670572Z","level":"info","event":"        - 13개 컬럼 × 242건","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.670957Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.671387Z","level":"info","event":"    2. /opt/airflow/data/validation_report.txt","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.671746Z","level":"info","event":"    - 전체 검증 리포트","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.672062Z","level":"info","event":"    - 파생 변수 생성 + 검증 결과","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.672386Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.672773Z","level":"info","event":"    데이터 품질: 100.0/100","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.673193Z","level":"info","event":"    상태: ✅ Transform 완료!","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.673499Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.673835Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.674204Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.674526Z","level":"info","event":"Phase 2-3 Transform 전체 완료!","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.674924Z","level":"info","event":"==================================================","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.667656Z","level":"info","event":"Done. Returned value was: ('/opt/airflow/data/samsung_transformed.csv', '/opt/airflow/data/validation_report.txt')","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":215}
+{"timestamp":"2025-12-03T07:56:31.667957Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019ae336-6ac5-7d93-b6d4-70b3be03179e'), task_id='transform_task', dag_id='samsung_etl_dag', run_id='manual__2025-12-03T07:56:23+00:00', try_number=1, dag_version_id=UUID('019ae335-3f7f-7cda-b9b6-afcce1c42ea6'), map_index=-1, hostname='ba7c767078cc', context_carrier={}, task=<Task(PythonOperator): transform_task>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=0, start_date=datetime.datetime(2025, 12, 3, 7, 56, 31, 131464, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1360}
+{"timestamp":"2025-12-03T07:56:31.702498Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.702953Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-03T07:56:31.703339Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_task>","logger":"task.stdout"}
