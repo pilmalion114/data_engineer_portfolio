@@ -1,0 +1,163 @@
+::group::Log message source detailssources=["/opt/airflow/logs/dag_id=samsung_etl_dag/run_id=manual__2025-12-03T07:56:23+00:00/task_id=transform_task/attempt=1.log"] 
+::endgroup::
+[2025-12-03T07:56:31.508185Z] INFO - DAG bundles loaded: dags-folder, example_dagssource=airflow.dag_processing.bundles.manager.DagBundlesManager loc=manager.py:179 
+[2025-12-03T07:56:31.509602Z] INFO - Filling up the DagBag from /opt/airflow/dags/samsung_ETL_dag.pysource=airflow.models.dagbag.DagBag loc=dagbag.py:593 
+[2025-12-03T07:56:31.553264Z] WARNING - The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.category=DeprecatedImportWarning source=py.warnings loc=/opt/airflow/dags/samsung_ETL_dag.py:4 
+[2025-12-03T07:56:31.574354Z] INFO - Task instance is in running statesource=task.stdout 
+[2025-12-03T07:56:31.574814Z] INFO -  Previous state of the Task instance: TaskInstanceState.QUEUEDsource=task.stdout 
+[2025-12-03T07:56:31.575178Z] INFO - Current task name:transform_tasksource=task.stdout 
+[2025-12-03T07:56:31.575590Z] INFO - Dag name:samsung_etl_dagsource=task.stdout 
+[2025-12-03T07:56:31.589337Z] INFO - 타입은: <class 'pandas.core.indexes.datetimes.DatetimeIndex'>source=task.stdout 
+[2025-12-03T07:56:31.589779Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.590091Z] INFO - 현재 데이터 확인source=task.stdout 
+[2025-12-03T07:56:31.590479Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.590788Z] INFO - 총 데이터: 242 rowssource=task.stdout 
+[2025-12-03T07:56:31.591213Z] INFO - 컬럼: ['Open', 'High', 'Low', 'Close', 'Volume', 'Change']source=task.stdout 
+[2025-12-03T07:56:31.591541Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.591829Z] INFO - 최근 5일:source=task.stdout 
+[2025-12-03T07:56:31.600185Z] INFO -              Open   High    Low  Close    Volume    Changesource=task.stdout 
+[2025-12-03T07:56:31.600732Z] INFO - Datesource=task.stdout 
+[2025-12-03T07:56:31.601170Z] INFO - 2024-11-28  56000  56400  55200  55500  20001134 -0.014210source=task.stdout 
+[2025-12-03T07:56:31.601512Z] INFO - 2024-11-29  55100  55300  53800  54200  24513531 -0.023423source=task.stdout 
+[2025-12-03T07:56:31.601926Z] INFO - 2024-12-02  54300  54400  53100  53600  22044867 -0.011070source=task.stdout 
+[2025-12-03T07:56:31.602213Z] INFO - 2024-12-03  53100  54400  53100  53600  23374603  0.000000source=task.stdout 
+[2025-12-03T07:56:31.602515Z] INFO - 2024-12-04  52000  53400  52000  53100  29004766 -0.009328source=task.stdout 
+[2025-12-03T07:56:31.602788Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.603075Z] INFO - 기본 통계:source=task.stdout 
+[2025-12-03T07:56:31.616922Z] INFO -                 Open           High  ...        Volume      Changesource=task.stdout 
+[2025-12-03T07:56:31.617417Z] INFO - count     242.000000     242.000000  ...  2.420000e+02  242.000000source=task.stdout 
+[2025-12-03T07:56:31.617731Z] INFO - mean    66473.140496   67321.900826  ...  1.939439e+07    0.002739source=task.stdout 
+[2025-12-03T07:56:31.618056Z] INFO - std     15804.211243   16084.137430  ...  7.614144e+06    0.021074source=task.stdout 
+[2025-12-03T07:56:31.618462Z] INFO - min     51100.000000   51400.000000  ...  5.848342e+06   -0.057654source=task.stdout 
+[2025-12-03T07:56:31.618736Z] INFO - 25%     55100.000000   55825.000000  ...  1.386390e+07   -0.010910source=task.stdout 
+[2025-12-03T07:56:31.619012Z] INFO - 50%     59300.000000   59850.000000  ...  1.809467e+07    0.001794source=task.stdout 
+[2025-12-03T07:56:31.619311Z] INFO - 75%     71075.000000   71875.000000  ...  2.334746e+07    0.014534source=task.stdout 
+[2025-12-03T07:56:31.619713Z] INFO - max    111800.000000  112400.000000  ...  5.482456e+07    0.068285source=task.stdout 
+[2025-12-03T07:56:31.620019Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.620300Z] INFO - [8 rows x 6 columns]source=task.stdout 
+[2025-12-03T07:56:31.620607Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.620899Z] INFO - Transform 시작: 파생 변수 생성source=task.stdout 
+[2025-12-03T07:56:31.621186Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.621546Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.621854Z] INFO - ✅ 파생 변수 생성 완료!source=task.stdout 
+[2025-12-03T07:56:31.622149Z] INFO - 새로운 컬럼: MA_5, MA_20, Volatility_20, Volume_MA_5, Price_Range, Price_Range_Pct, Close_Positionsource=task.stdout 
+[2025-12-03T07:56:31.622432Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.622769Z] INFO - 최근 5일 데이터 (파생 변수 포함):source=task.stdout 
+[2025-12-03T07:56:31.626712Z] INFO -              Close     MA_5     MA_20  Volatility_20  Price_Range_Pctsource=task.stdout 
+[2025-12-03T07:56:31.627178Z] INFO - Datesource=task.stdout 
+[2025-12-03T07:56:31.627526Z] INFO - 2025-11-21   94800  98060.0  101240.0       0.034200         2.426160source=task.stdout 
+[2025-12-03T07:56:31.627868Z] INFO - 2025-11-24   96700  97280.0  100975.0       0.033663         2.895553source=task.stdout 
+[2025-12-03T07:56:31.628171Z] INFO - 2025-11-25   99300  97580.0  100965.0       0.033826         3.625378source=task.stdout 
+[2025-12-03T07:56:31.628450Z] INFO - 2025-11-26  102800  98840.0  101080.0       0.034661         3.501946source=task.stdout 
+[2025-12-03T07:56:31.628777Z] INFO - 2025-11-27  103500  99420.0  101050.0       0.033754         2.705314source=task.stdout 
+[2025-12-03T07:56:31.629048Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.629342Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.629682Z] INFO - 결측치 확인source=task.stdout 
+[2025-12-03T07:56:31.630011Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.630445Z] INFO - Open                0source=task.stdout 
+[2025-12-03T07:56:31.630754Z] INFO - High                0source=task.stdout 
+[2025-12-03T07:56:31.631080Z] INFO - Low                 0source=task.stdout 
+[2025-12-03T07:56:31.631385Z] INFO - Close               0source=task.stdout 
+[2025-12-03T07:56:31.631751Z] INFO - Volume              0source=task.stdout 
+[2025-12-03T07:56:31.632089Z] INFO - Change              0source=task.stdout 
+[2025-12-03T07:56:31.632383Z] INFO - MA_5                4source=task.stdout 
+[2025-12-03T07:56:31.632676Z] INFO - MA_20              19source=task.stdout 
+[2025-12-03T07:56:31.632971Z] INFO - Volatility_20      19source=task.stdout 
+[2025-12-03T07:56:31.633328Z] INFO - Volume_MA_5         4source=task.stdout 
+[2025-12-03T07:56:31.633629Z] INFO - Price_Range         0source=task.stdout 
+[2025-12-03T07:56:31.633949Z] INFO - Price_Range_Pct     0source=task.stdout 
+[2025-12-03T07:56:31.634247Z] INFO - Close_Position      0source=task.stdout 
+[2025-12-03T07:56:31.634559Z] INFO - dtype: int64source=task.stdout 
+[2025-12-03T07:56:31.634847Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.635163Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.635488Z] INFO - Step 2: 데이터 검증 로직source=task.stdout 
+[2025-12-03T07:56:31.635779Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.636042Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.636289Z] INFO - [1] 논리적 검증source=task.stdout 
+[2025-12-03T07:56:31.636620Z] INFO - --------------------------------------------------source=task.stdout 
+[2025-12-03T07:56:31.636980Z] INFO - ✅ High >= Low: 정상source=task.stdout 
+[2025-12-03T07:56:31.637275Z] INFO - ✅ High >= Close >= Low: 정상source=task.stdout 
+[2025-12-03T07:56:31.637540Z] INFO - ✅ High >= Open >= Low: 정상source=task.stdout 
+[2025-12-03T07:56:31.637812Z] INFO - ✅ Volume > 0: 정상source=task.stdout 
+[2025-12-03T07:56:31.638095Z] INFO - ✅ 모든 가격 양수: 정상source=task.stdout 
+[2025-12-03T07:56:31.638410Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.638677Z] INFO - --------------------------------------------------source=task.stdout 
+[2025-12-03T07:56:31.638990Z] INFO - [2] 이상치 탐지source=task.stdout 
+[2025-12-03T07:56:31.639332Z] INFO - --------------------------------------------------source=task.stdout 
+[2025-12-03T07:56:31.640022Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.640371Z] INFO - 급등 (5% 이상): 0건source=task.stdout 
+[2025-12-03T07:56:31.640671Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.640980Z] INFO - 급락 (5% 이하): 0건source=task.stdout 
+[2025-12-03T07:56:31.641260Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.641573Z] INFO - 거래량 폭증 (평균의 2배 이상): 6건source=task.stdout 
+[2025-12-03T07:56:31.641865Z] INFO -               Volume    Changesource=task.stdout 
+[2025-12-03T07:56:31.642183Z] INFO - Datesource=task.stdout 
+[2025-12-03T07:56:31.642481Z] INFO - 2025-10-31  54824564  0.032661source=task.stdout 
+[2025-12-03T07:56:31.642852Z] INFO - 2025-10-02  49883028  0.034884source=task.stdout 
+[2025-12-03T07:56:31.643139Z] INFO - 2025-11-05  44843020 -0.040991source=task.stdout 
+[2025-12-03T07:56:31.643519Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.643804Z] INFO - 일중 변동폭 큼 (5% 이상): 5건source=task.stdout 
+[2025-12-03T07:56:31.644144Z] INFO -               High     Low  Price_Range_Pctsource=task.stdout 
+[2025-12-03T07:56:31.644487Z] INFO - Datesource=task.stdout 
+[2025-12-03T07:56:31.644859Z] INFO - 2025-11-04  112400  104900         7.149666source=task.stdout 
+[2025-12-03T07:56:31.645127Z] INFO - 2025-10-14   96000   90200         6.331878source=task.stdout 
+[2025-12-03T07:56:31.645411Z] INFO - 2025-02-10   55900   52900         5.395683source=task.stdout 
+[2025-12-03T07:56:31.645730Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.646047Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.646315Z] INFO - 검증 결과 요약source=task.stdout 
+[2025-12-03T07:56:31.646595Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.646925Z] INFO - 총 데이터: 242건source=task.stdout 
+[2025-12-03T07:56:31.647214Z] INFO - 논리적 오류: 0건source=task.stdout 
+[2025-12-03T07:56:31.647669Z] INFO - 급등 (5%+): 0건source=task.stdout 
+[2025-12-03T07:56:31.647960Z] INFO - 급락 (5%-): 0건source=task.stdout 
+[2025-12-03T07:56:31.648314Z] INFO - 거래량 폭증: 6건source=task.stdout 
+[2025-12-03T07:56:31.648687Z] INFO - 일중 변동 큼: 5건source=task.stdout 
+[2025-12-03T07:56:31.648962Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.649259Z] INFO - 데이터 품질 점수: 100.0/100source=task.stdout 
+[2025-12-03T07:56:31.649559Z] INFO - ✅ 완벽한 데이터 품질!source=task.stdout 
+[2025-12-03T07:56:31.649853Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.650125Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.650465Z] INFO - Step 2: 데이터 검증 완료!source=task.stdout 
+[2025-12-03T07:56:31.650829Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.651117Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.651438Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.651799Z] INFO - Step 3: 데이터 저장source=task.stdout 
+[2025-12-03T07:56:31.652189Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.652621Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.652967Z] INFO - [1] 변환된 데이터 저장source=task.stdout 
+[2025-12-03T07:56:31.653294Z] INFO - --------------------------------------------------source=task.stdout 
+[2025-12-03T07:56:31.653747Z] INFO - ✅ 파일 저장: /opt/airflow/data/samsung_transformed.csvsource=task.stdout 
+[2025-12-03T07:56:31.654168Z] INFO -    - 총 컬럼: 13개source=task.stdout 
+[2025-12-03T07:56:31.654480Z] INFO -    - 총 데이터: 242건source=task.stdout 
+[2025-12-03T07:56:31.654815Z] INFO -    - 파일 크기: 34.3 KBsource=task.stdout 
+[2025-12-03T07:56:31.655152Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.655529Z] INFO - [2] 검증 리포트 저장source=task.stdout 
+[2025-12-03T07:56:31.655848Z] INFO - --------------------------------------------------source=task.stdout 
+[2025-12-03T07:56:31.666299Z] INFO - ✅ 검증 리포트 저장: /opt/airflow/data/validation_report.txtsource=task.stdout 
+[2025-12-03T07:56:31.667358Z] INFO -    - 파일 크기: 2.9 KBsource=task.stdout 
+[2025-12-03T07:56:31.667736Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.667656Z] INFO - Done. Returned value was: ('/opt/airflow/data/samsung_transformed.csv', '/opt/airflow/data/validation_report.txt')source=airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator loc=python.py:215 
+[2025-12-03T07:56:31.667957Z] INFO - Pushing xcomti=RuntimeTaskInstance(id=UUID('019ae336-6ac5-7d93-b6d4-70b3be03179e'), task_id='transform_task', dag_id='samsung_etl_dag', run_id='manual__2025-12-03T07:56:23+00:00', try_number=1, dag_version_id=UUID('019ae335-3f7f-7cda-b9b6-afcce1c42ea6'), map_index=-1, hostname='ba7c767078cc', context_carrier={}, task=<Task(PythonOperator): transform_task>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=0, start_date=datetime.datetime(2025, 12, 3, 7, 56, 31, 131464, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None) source=task loc=task_runner.py:1360 
+[2025-12-03T07:56:31.668088Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.668545Z] INFO - Transform 완료 요약source=task.stdout 
+[2025-12-03T07:56:31.668904Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.669278Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.669576Z] INFO -     생성된 파일:source=task.stdout 
+[2025-12-03T07:56:31.669909Z] INFO -     1. /opt/airflow/data/samsung_transformed.csvsource=task.stdout 
+[2025-12-03T07:56:31.670231Z] INFO -         - 변환된 주가 데이터 (파생 변수 포함)source=task.stdout 
+[2025-12-03T07:56:31.670572Z] INFO -         - 13개 컬럼 × 242건source=task.stdout 
+[2025-12-03T07:56:31.670957Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.671387Z] INFO -     2. /opt/airflow/data/validation_report.txtsource=task.stdout 
+[2025-12-03T07:56:31.671746Z] INFO -     - 전체 검증 리포트source=task.stdout 
+[2025-12-03T07:56:31.672062Z] INFO -     - 파생 변수 생성 + 검증 결과source=task.stdout 
+[2025-12-03T07:56:31.672386Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.672773Z] INFO -     데이터 품질: 100.0/100source=task.stdout 
+[2025-12-03T07:56:31.673193Z] INFO -     상태: ✅ Transform 완료!source=task.stdout 
+[2025-12-03T07:56:31.673499Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.673835Z] INFO - source=task.stdout 
+[2025-12-03T07:56:31.674204Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.674526Z] INFO - Phase 2-3 Transform 전체 완료!source=task.stdout 
+[2025-12-03T07:56:31.674924Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:31.702498Z] INFO - Task instance in success statesource=task.stdout 
+[2025-12-03T07:56:31.702953Z] INFO -  Previous state of the Task instance: TaskInstanceState.RUNNINGsource=task.stdout 
+[2025-12-03T07:56:31.703339Z] INFO - Task operator:<Task(PythonOperator): transform_task>source=task.stdout 

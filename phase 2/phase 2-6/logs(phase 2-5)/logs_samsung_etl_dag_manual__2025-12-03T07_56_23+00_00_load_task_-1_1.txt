@@ -1,0 +1,14 @@
+::group::Log message source detailssources=["/opt/airflow/logs/dag_id=samsung_etl_dag/run_id=manual__2025-12-03T07:56:23+00:00/task_id=load_task/attempt=1.log"] 
+::endgroup::
+[2025-12-03T07:56:33.763617Z] INFO - DAG bundles loaded: dags-folder, example_dagssource=airflow.dag_processing.bundles.manager.DagBundlesManager loc=manager.py:179 
+[2025-12-03T07:56:33.764999Z] INFO - Filling up the DagBag from /opt/airflow/dags/samsung_ETL_dag.pysource=airflow.models.dagbag.DagBag loc=dagbag.py:593 
+[2025-12-03T07:56:33.805308Z] WARNING - The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.category=DeprecatedImportWarning source=py.warnings loc=/opt/airflow/dags/samsung_ETL_dag.py:4 
+[2025-12-03T07:56:33.825260Z] INFO - Task instance is in running statesource=task.stdout 
+[2025-12-03T07:56:33.825754Z] INFO -  Previous state of the Task instance: TaskInstanceState.QUEUEDsource=task.stdout 
+[2025-12-03T07:56:33.826140Z] INFO - Current task name:load_tasksource=task.stdout 
+[2025-12-03T07:56:33.826534Z] INFO - Dag name:samsung_etl_dagsource=task.stdout 
+[2025-12-03T07:56:34.131040Z] INFO - 데이터 242건 적재 완료!source=task.stdout 
+[2025-12-03T07:56:34.131130Z] INFO - Done. Returned value was: Nonesource=airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator loc=python.py:215 
+[2025-12-03T07:56:34.150352Z] INFO - Task instance in success statesource=task.stdout 
+[2025-12-03T07:56:34.150843Z] INFO -  Previous state of the Task instance: TaskInstanceState.RUNNINGsource=task.stdout 
+[2025-12-03T07:56:34.151218Z] INFO - Task operator:<Task(PythonOperator): load_task>source=task.stdout 

@@ -1,0 +1,24 @@
+::group::Log message source detailssources=["/opt/airflow/logs/dag_id=samsung_etl_dag/run_id=manual__2025-12-03T07:56:23+00:00/task_id=extract_task/attempt=1.log"] 
+::endgroup::
+[2025-12-03T07:56:30.758580Z] INFO - DAG bundles loaded: dags-folder, example_dagssource=airflow.dag_processing.bundles.manager.DagBundlesManager loc=manager.py:179 
+[2025-12-03T07:56:30.759713Z] INFO - Filling up the DagBag from /opt/airflow/dags/samsung_ETL_dag.pysource=airflow.models.dagbag.DagBag loc=dagbag.py:593 
+[2025-12-03T07:56:30.835751Z] WARNING - The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.category=DeprecatedImportWarning source=py.warnings loc=/opt/airflow/dags/samsung_ETL_dag.py:4 
+[2025-12-03T07:56:30.868532Z] INFO - Task instance is in running statesource=task.stdout 
+[2025-12-03T07:56:30.869047Z] INFO -  Previous state of the Task instance: TaskInstanceState.QUEUEDsource=task.stdout 
+[2025-12-03T07:56:30.869517Z] INFO - Current task name:extract_tasksource=task.stdout 
+[2025-12-03T07:56:30.869785Z] INFO - Dag name:samsung_etl_dagsource=task.stdout 
+[2025-12-03T07:56:30.870921Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:30.871216Z] INFO - 삼성전자 주가 데이터 추출source=task.stdout 
+[2025-12-03T07:56:30.871518Z] INFO - ==================================================source=task.stdout 
+[2025-12-03T07:56:30.871854Z] INFO - 종목 코드: 005930source=task.stdout 
+[2025-12-03T07:56:30.872169Z] INFO - 추출 기간: 2024-11-28 ~ 2025-11-27source=task.stdout 
+[2025-12-03T07:56:30.872616Z] INFO - --------------------------------------------------source=task.stdout 
+[2025-12-03T07:56:30.872978Z] INFO - source=task.stdout 
+[2025-12-03T07:56:30.873274Z] INFO - 데이터 추출 중...source=task.stdout 
+[2025-12-03T07:56:30.881392Z] INFO - ✅ 파일 확인 완료: /opt/airflow/data/samsung_2024-11-28_2025-11-27.csvsource=task.stdout 
+[2025-12-03T07:56:30.881799Z] INFO - 총 데이터: 242 rowssource=task.stdout 
+[2025-12-03T07:56:30.881488Z] INFO - Done. Returned value was: /opt/airflow/data/samsung_2024-11-28_2025-11-27.csvsource=airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator loc=python.py:215 
+[2025-12-03T07:56:30.881749Z] INFO - Pushing xcomti=RuntimeTaskInstance(id=UUID('019ae336-6ac4-7aac-a55e-982b045f0d88'), task_id='extract_task', dag_id='samsung_etl_dag', run_id='manual__2025-12-03T07:56:23+00:00', try_number=1, dag_version_id=UUID('019ae335-3f7f-7cda-b9b6-afcce1c42ea6'), map_index=-1, hostname='ba7c767078cc', context_carrier={}, task=<Task(PythonOperator): extract_task>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=0, start_date=datetime.datetime(2025, 12, 3, 7, 56, 26, 733766, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None) source=task loc=task_runner.py:1360 
+[2025-12-03T07:56:30.918412Z] INFO - Task instance in success statesource=task.stdout 
+[2025-12-03T07:56:30.918898Z] INFO -  Previous state of the Task instance: TaskInstanceState.RUNNINGsource=task.stdout 
+[2025-12-03T07:56:30.919252Z] INFO - Task operator:<Task(PythonOperator): extract_task>source=task.stdout 
