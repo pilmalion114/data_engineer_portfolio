@@ -1,0 +1,33 @@
+version: '3.8' # Docker Compose 파일 버전
+
+services: # 실행할 서비스(컨테이너) 목록
+  postgres: # 서비스 이름(원하는 대로 변경 가능)
+    image: postgres:16 # 사용할 Docker 이미지
+    container_name: movie_postgres # 컨테이너 이름(docker ps에서 보이는 이름)
+    environment: # 환경 변수 설정
+      POSTGRES_USER: ${POSTGRES_USER} # Postgre 사용자 이름
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} # Postgre 비밀번호
+      POSTGRES_DB: ${POSTGRES_DB} # 생성할 데이터베이스 이름(DW=Data Warehouse(창고))
+
+    ports: # 포트 매핑(호스트:컨테이너)
+      - "${POSTGRES_PORT}:5432" # 로컬 5432포트 -> 컨테이너 5432 포트 연결(저번 docker-compose.yaml에서 포트 변경할 때 했던 것)
+        # Postgre 기본 포트는 5432
+
+    volumes: # 데이터 영속성(영구성,persistence) 보장(컨테이너 삭제해도 데이터 유지)
+      - postgres_data:/var/lib/postgresql/data
+       # postgres_data라는 볼륨을 컨테이너의 데이터 저장 경로에 마운트(마운트: 로컬 저장 공간을 컨테이너 내부 경로에 '연결'하는 것. USB 꽂는 것과 같은 개념. 실제로는 로컬에 저장되지만, 컨테이너는 자기 안에 있는 것처럼 사용함.)
+
+    healthcheck: # 헬스체크(컨테이너가 정상 작동하는지 확인) 
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"] # 'cmd-shell'은 형식이다. 여기서 명령어를 실행하겠다는 의미. 'pg_isready -U movie_user'은 실제 명령어이다. 뜻은, pg_isready: DB가 연결 받을 준비가 되었는지 확인. -U: user 옵션. movie_user: 우리가 설정한 사용자 이름.
+      interval: 10s # 반복 간격 시간
+      timeout: 5s # 시간 초과 시간
+      retries: 5 # 시도 횟수
+
+
+
+volumes: # 사용할 볼륨 정의
+  postgres_data: # 볼륨 이름(위에서 사용한 것과 동일)
+  # Dokcer가 자동으로 관리하는 저장 공간
+
+
+
