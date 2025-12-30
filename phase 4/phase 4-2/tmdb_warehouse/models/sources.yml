@@ -3,5 +3,11 @@ version: 2 # dbt 설정 파일 버전
 sources: # 원본 데이터 소스 정의 시작
   - name: movie_raw # 소스 그룹 이름
     schema: public # PostgreSQL 스키마(네임스페이스) -> db 스키마랑은 조금 다르다. images/ 폴더에서 dbt vs db schema 차이점 확인!
-    
+    tables: # 이 소스에 포함된 테이블 목록
+      - name: dim_movie # 영화 차원 테이블
+      - name: dim_genre  # 장르 차원 테이블
+      - name: dim_date  # 날짜 차원 테이블
+      - name: dim_user  # 사용자 차원 테이블
+      - name: movie_genre  # 영화-장르 브릿지 테이블
+      - name: fact_viewlog  # 조회 로그 팩트 테이블
 
