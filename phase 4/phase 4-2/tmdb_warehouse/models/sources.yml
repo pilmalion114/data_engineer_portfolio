@@ -2,7 +2,7 @@ version: 2 # dbt 설정 파일 버전
 
 sources: # 원본 데이터 소스 정의 시작
   - name: movie_raw # 소스 그룹 이름
-    schema: public # PostgreSQL 스키마(네임스페이스) -> db 스키마랑은 조금 다르다. images/ 폴더에서 dbt vs db schema 차이점 확인!
+    schema: public # PostgreSQL 스키마(네임스페이스) -> db 스키마랑은 조금 다르다. images/ 폴더에서 dbt vs db schema 차이점 확인!. 원본(raw) 데이터가 어디있는지(나 같은 경우에는 phase 4-1의 원본 테이블 데이터)의 네임스페이스이다. 그리고 postgreSQL 특성상 schema에 아무 이름도 안 지으면, 기본적으로 'default'를 의미하는 'public'으로 설정한다.
     tables: # 이 소스에 포함된 테이블 목록
       - name: dim_movie # 영화 차원 테이블
       - name: dim_genre  # 장르 차원 테이블
