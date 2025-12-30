@@ -1,0 +1,7 @@
+version: 2 # dbt 설정 파일 버전
+
+sources: # 원본 데이터 소스 정의 시작
+  - name: movie_raw # 소스 그룹 이름
+    schema: public # PostgreSQL 스키마(네임스페이스) -> db 스키마랑은 조금 다르다. images/ 폴더에서 dbt vs db schema 차이점 확인!
+    
+
