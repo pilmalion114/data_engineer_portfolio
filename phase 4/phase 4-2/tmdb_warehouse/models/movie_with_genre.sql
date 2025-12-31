@@ -22,7 +22,7 @@ SELECT
         when m.vote_average >= 8.0 then 'Excellent'
         when m.vote_average >= 7.0 then 'Good'
         when m.vote_average >= 6.0 then 'Average'
-        else 'poor'
+        else 'Poor'
     end as rating_category -- case-when-end 구조. end는 단순 case문의 끝(종료)를 나타낸다.
 from {{ ref('dim_movie') }} m -- 간단히(단순히) 이해하자면, ref는 그냥 단어 의미 그대로, 다른 테이블을 '참조'하는 거라고 생각하면 됨. 다만 차이점은, 'FROM public_dbt_models.dim_movie m(일반 SQL)' 와 'ref'의 차이점은, 1. 테이블 참조(공통 부분) 2. 의존성 파악(ref) 3. 자동 순서 정렬(ref). ex.) 'movie_with_genre.sql'이 'dim_movie.sql'를 참조한다. -> dbt run하면, dim_movie 먼저 실행 -> 그 다음 movie_with_genre 실행. 
 left join {{ ref('movie_genre') }} mg on m.movie_id = mg.movie_id -- left (outer) join: 왼쪽 테이블은 all, 오른쪽 테이블은 공통(겹치는) 부분만(없으면 Null). right (outer) join은 left join의 반대로. full (outer) join은 left+right(합집합). images/ 폴더에 있는 사진 참고. full outer join 시 공통 부분은 중복을 허용하여 겹치는 속성들이 중복으로 2개 나올 수 있고, 아니면 자연 조인(Natural Join, 겹치는 부분을 2개 다 열로 표현하는 게 아니라 하나만 사용하는 조인)으로 중복 제거해줄 수도 있다.

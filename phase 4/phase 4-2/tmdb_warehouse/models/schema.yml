@@ -1,0 +1,62 @@
+# dbt 테스트 설정 파일
+# 목적: 데이터 품질 자동 검증(select로 읽기만 함, 데이터 수정 없음)
+
+version: 2
+
+models:
+  - name: dim_movie # 테스트할 모델 이름
+    description: "영화 차원 테이블"
+    columns:
+      - name: movie_id
+        description: "영화 고유 ID"
+        tests:
+          - unique # 중복 체크: movie_id가 유일한지 검증
+          - not_null # NULL 체크: movie_id에 NULL이 없는지 검증
+      - name: title
+        description: "영화 제목"
+        tests:
+          - not_null    # title에 NULL이 없는지
+      - name: vote_average
+        description: "평균 평점"
+        tests:
+          - not_null    # vote_average에 NULL이 없는지
+
+  - name: dim_genre
+    description: "장르 차원 테이블"
+    columns:
+      - name: genre_id
+        tests:
+          - unique      # genre_id 중복 체크
+          - not_null    # genre_id NULL 체크
+      - name: genre_name
+        tests:
+          - not_null    # genre_name NULL 체크
+
+  - name: dim_user
+    description: "사용자 차원 테이블"
+    columns:
+      - name: user_id
+        tests:
+          - unique      # user_id 중복 체크
+          - not_null    # user_id NULL 체크
+      - name: username
+        tests:
+          - not_null    # username NULL 체크
+
+  - name: movie_with_genre
+    description: "영화 + 장르 통합 테이블"
+    columns:
+      - name: movie_id
+        tests:
+          - unique      # movie_id 중복 체크
+          - not_null    # movie_id NULL 체크
+      - name: genres
+        tests:
+          - not_null    # genres NULL 체크
+      - name: rating_category
+        tests:
+          - not_null    # rating_category NULL 체크
+          - accepted_values:  # 허용된 값만 있는지 체크
+              values: ['Excellent', 'Good', 'Average', 'Poor']  # 이 4개 값만 허용
+
+
